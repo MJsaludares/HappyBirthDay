@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            text-align: center;
+        }
+
+        /* Greeting Text */
+        .greeting {
+            font-size: 4rem;
+            color: #ff6347;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        /* Balloon Styling */
+        .balloon-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .balloon {
+            width: 100px;
+            height: 150px;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .balloon.red { background-color: #e74c3c; }
+        .balloon.blue { background-color: #ffffff }
+        .balloon.green { background-color: #2ecc71; }
+        .balloon.yellow { background-color: #f39c12; }
+
+        /* Balloon Float Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Balloon String */
+        .balloon::after {
+            content: '';
+            width: 3px;
+            height: 100px;
+            background-color: #555;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="greeting">Happy  60th birthday TATANG!</h1>
+          <h2>greeting for your son</h2>
+          <p>tatang/tatay, on your special day, I would like to express my heartfelt gratitude and love. You have been a guide, strength, and inspiration in everything I do. As each year passes, I notice more and more how kind and important you are to our family. Thank you for all the sacrifices, help, and endless love you show us.
+I cannot repay all that you have done for me, but I hope you feel that every step I take is a result of your lessons and care. I just want to let you know how deeply thankful I am that you are my father. I am proud of you, and I hope you continue to experience the blessings that life has to offer.
+
+Happy birthday,tatang/tatay! May your year be filled with happiness, joy, and good health! I love you so much! </p>
+        <div class="balloon-container">
+            <div class="balloon red"></div>
+            <div class="balloon blue"></div>
+            <div class="balloon green"></div>
+            <div class="balloon yellow"></div>
+        </div>
+    </div>
+</body>
+</html>
